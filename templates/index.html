@@ -17,9 +17,9 @@
     <!-- Code for navigation bar -->
     <div id="nav_bar">
       <ul id="nav_bar_list">
-        <li><a href="https://www.amalk.au/">GitHub / Online Portfolio</a></li>
+        <li><a href="https://www.amalk.au/" target="_blank">GitHub & Online Portfolio </a></li>
         <li>
-          <a href="https://amaldevelops.pythonanywhere.com/">Home page</a>
+          <a href="https://github.com/amaldevelops/weather-app-python" target="_blank">Source Code</a>
         </li>
       </ul>
     </div>
@@ -31,11 +31,12 @@
     </div>
 
     <div>
+        <p>The default weather location is Melbourne, AU. To check the weather for another city, please enter the full city name and the two-letter country code below. </p>
       <form action="/" method="GET" class="form">
         <label for="cityName">City Name</label><br />
-        <input type="text" id="cityName" name="cityName" /><br />
+        <input type="text" id="cityName" name="cityName" required /><br />
         <label for="countryCode">Country Code</label><br />
-        <input type="text" id="countryCode" name="countryCode" /><br />
+        <input type="text" id="countryCode" name="countryCode" required/><br />
         <button type="submit">Get Weather Info</button><br />
       </form>
     </div>
