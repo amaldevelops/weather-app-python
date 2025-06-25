@@ -1,12 +1,11 @@
-#Amal Kariyawasam, 11/08/2022, WeatherApp using OpenWeatherMap
+#Amal Kariyawasam, 26/06/2025, WeatherApp using OpenWeatherMap
 
-from flask import Flask, render_template, request # This will import flask module, request module and render HTML/Jinja module
-import requests #This will import requests module
-app = Flask(__name__) # invoke the Flask class
-
+from flask import Flask, render_template, request 
+import requests 
+app = Flask(__name__)
 
 #Function to query Weather API and to return data 
-def weather(location_input): # Define main function
+def weather(location_input): 
         API_key="4e0be172ba5affd1c6fb97aceabe2940" # API Key from Openweather MAP
         api_address=f"https://api.openweathermap.org/data/2.5/weather?q={location_input}&appid={API_key}&units=metric" # Query to get the weather
         api_response=requests.get(api_address) # Save response into a variable
@@ -15,13 +14,13 @@ def weather(location_input): # Define main function
 
         #Following code will run for Correct location
         if status_code==200:
-                weather_desc=api_to_dict["weather"][0]["description"] ## This will give output of weather atrribute "Description of the weather"
-                current_temp=api_to_dict["main"]["temp"] # Save the current temperature from the dictionary
-                weather_feels=api_to_dict["main"]["feels_like"] # This will give output of weather atrribute "Feels like"
-                pressure=api_to_dict["main"]["pressure"] # This will give output of weather atrribute "Pressure"
-                humidity=api_to_dict["main"]["humidity"] # This will give output of weather atrribute "Humidity"
-                selected_location=api_to_dict["name"] # This will give output of currently selected "city name"
-                selected_country=api_to_dict["sys"]["country"] # This will give output of currently selected "Country with two digit country code"
+                weather_desc=api_to_dict["weather"][0]["description"] 
+                current_temp=api_to_dict["main"]["temp"] 
+                weather_feels=api_to_dict["main"]["feels_like"]
+                pressure=api_to_dict["main"]["pressure"] 
+                humidity=api_to_dict["main"]["humidity"]
+                selected_location=api_to_dict["name"] 
+                selected_country=api_to_dict["sys"]["country"] 
                 
                 # Below variable will save all weather data to final_output variable
                 final_output=f"Current weather in {selected_location}, {selected_country} is {weather_desc} and the temperature is {current_temp}°C and it feels like {weather_feels}°C. The pressure is {pressure} hpa and the humidity is {humidity}%"
@@ -35,9 +34,10 @@ def weather(location_input): # Define main function
 
 
 # Following function will declare the index function and call index.html and the weather () function
-@app.route("/",methods=["GET"]) #Setup App route and Method
-def main_route(): # Define route function
-    return render_template("index.html", weather=weather("Melbourne,au")) #Render the template by passing variables
+@app.route("/",methods=["GET"]) 
+def main_route(): 
+    return render_template("index.html", weather=weather("Melbourne,au")) #Render the template by passing default variables
+
 # Following function will get the the location from URL and try to pass this to the weather() function
 @app.route("/<location>",methods=["GET"]) #Setup App route and Method
 def weather_by_location(location): # Define route function
