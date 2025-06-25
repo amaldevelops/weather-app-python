@@ -38,7 +38,6 @@ def weather(location_input): # Define main function
 @app.route("/",methods=["GET"]) #Setup App route and Method
 def main_route(): # Define route function
     return render_template("index.html", weather=weather("Melbourne,au")) #Render the template by passing variables
-xcj
 # Following function will get the the location from URL and try to pass this to the weather() function
 @app.route("/<location>",methods=["GET"]) #Setup App route and Method
 def weather_by_location(location): # Define route function
