@@ -1,85 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Amal Kariyawasam,25/06/2025, Weather App -->
-<!-- Code to setup the HTML File -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-    <title>Simple WeatherApp using OpenWeather API, Python/Flask, HTML and CSS</title>
-    </head>
-<body>
-
-<!-- Code for navigation bar -->
-<div id="nav_bar">
-    <ul id="nav_bar_list">
+  <head>
+    <!-- Amal Kariyawasam,25/06/2025, Weather App -->
+    <!-- Code to setup the HTML File -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+    <title>
+      Simple WeatherApp using OpenWeather API, Python/Flask, HTML and CSS
+    </title>
+  </head>
+  <body>
+    <!-- Code for navigation bar -->
+    <div id="nav_bar">
+      <ul id="nav_bar_list">
         <li><a href="https://www.amalk.au/">GitHub / Online Portfolio</a></li>
-        <li><a href="https://amaldevelops.pythonanywhere.com/">Home page</a></li>
+        <li>
+          <a href="https://amaldevelops.pythonanywhere.com/">Home page</a>
+        </li>
+      </ul>
+    </div>
 
-    </ul>
-    <h1>Simple WeatherApp using OpenWeather API, Python/Flask, HTML and CSS </h1>
-        </div>
+    <div class="intro">
+      <h1>
+        Simple WeatherApp using OpenWeather API, Python/Flask, HTML and CSS
+      </h1>
+    </div>
 
-<!-- Current weather will be displayed here -->
-<div class="current_weather">
-    <h1>{{weather}}<h1>
-        <h1>Have an awesome day !</h1>
-    
-        </div>
+    <!-- Current weather will be displayed here -->
+    <div class="current_weather">
+      <h1>{{weather}}</h1>
+      <h1>Have an awesome day !</h1>
+    </div>
 
- <!-- Info about how to use the app         -->
-<div id="usage">
-    <h1>Usage</h1>
-    <ol>
+    <!-- Info about how to use the app         -->
+    <div id="usage">
+      <h1>Usage</h1>
+      <ol>
         <li>Default weather location is set as Melbourne, Australia</li>
-        <li>To get any location enter ["/city_name,two digit country code"] infront of the base URL. <br>I.e. for Colombo, LK enter <a href="https://amaldevelops.pythonanywhere.com/colombo,lk">https://amaldevelops.pythonanywhere.com/colombo,lk</a> </li>
-    </ol>
-        </div>
+        <li>
+          To get any location enter ["/city_name,two digit country code"]
+          infront of the base URL. <br />I.e. for Colombo, LK enter
+          <a href="https://amaldevelops.pythonanywhere.com/colombo,lk"
+            >https://amaldevelops.pythonanywhere.com/colombo,lk</a
+          >
+        </li>
+      </ol>
+    </div>
 
-<!-- Info about the tech stack -->
-<div id="tech_stack">
-<h2> Technology stack and how this app work ! </h2>
+    <!-- Info about the tech stack -->
+    <div id="tech_stack">
+      <h2>Technology stack and how this app work !</h2>
 
-<p>Front end code for this web app is written in;</p>
-<ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">HTML</a>, (HyperText Markup Language) is the code that is used to structure this web page and its content</li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>, (Cascading Style Sheets) is a stylesheet language used to describe the presentation of this document written in HTML</li>
-    <li><a href="https://palletsprojects.com/p/jinja/" target="_blank">Jinja</a>, is a full-featured template engine for Python that is used to pass Python variables to the HTML web page </li>
-</ul>
+      <p>Front end code for this web app is written in;</p>
+      <ul>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+            target="_blank"
+            >HTML</a
+          >, (HyperText Markup Language) is the code that is used to structure
+          this web page and its content
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            target="_blank"
+            >CSS</a
+          >, (Cascading Style Sheets) is a stylesheet language used to describe
+          the presentation of this document written in HTML
+        </li>
+        <li>
+          <a href="https://palletsprojects.com/p/jinja/" target="_blank"
+            >Jinja</a
+          >, is a full-featured template engine for Python that is used to pass
+          Python variables to the HTML web page
+        </li>
+      </ul>
 
-<p>Back end code for this web app is written in;</p>
-<ul>
-    <li><a href="https://www.python.org/" target="_blank">Python</a>, a high-level, interpreted, general-purpose programming language. <br>
-        Its design philosophy emphasises code readability with the use of significant indentation. <br>
-        Python is dynamically-typed and garbage-collected. 
-        It supports multiple programming paradigms, including structured (particularly procedural),object-oriented and functional programming. 
-        It is often described as a "batteries included" language due to its comprehensive standard library</li>
-    <li><a href="https://palletsprojects.com/p/flask/" target="_blank">Flask</a>, is a lightweight <a href="https://wsgi.readthedocs.io/en/latest/what.html" target="_blank">WSGI</a> web application framework</li>
-    <li><a href="https://openweathermap.org/current" target="_blank">OpenWeatherMap API</a>, is used to receive Weather data</li>
-    <li><a href="https://www.pythonanywhere.com/" target="_blank">Python Anywhere</a>, is used to host this Webapp which allows you to host, run, and code Python in the cloud, which is pretty cool!</li>
-</ul>
- 
-<h3>How this app work ?</h3>
-<ol>
-    <li>When a user enters the web app URL i.e. <a href="https://amaldevelops.pythonanywhere.com/">https://amaldevelops.pythonanywhere.com</a> it will call the main route in the Python code.</li>
-    <li>Default behaviour of the Main route in the Python/flask code is programmed so it will give "Melbourne,Australia" weather information by calling up the main function and will pass the location as a variable to the function, which contains code to call the OpenWeathermap API.</li>
-    <li>Using the following format we can call the API using this format with a <a href="https://flask.palletsprojects.com/en/2.2.x/quickstart/" target="_blank">GET request:</a> <code>[https://api.openweathermap.org/data/2.5/weather?q={location_input}&appid={API_key}&units=metric]</code></li>
-    <li><code>{location_input}</code> is passed from the user entered location along with <code>{API_key}</code> supplied by openweathermap.[&units=metric] is used to specify the unit of measurement we need.</li>
-    <li>In response Openweathermap will send a response in <a href="https://www.json.org/json-en.html" target="_blank">JSON format</a></li>
-    <li>A function written in Python will convert JSON format to a Python Dictionary and we can then manipulate the data as we wish. </li>
-    <li>Using  <a href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank">Python dictionary methods</a> we can extract the information we require and all required weather data is stored in a Python variable in text format.</li>
-    <li>Above Python variable is passed to Flask and it is parsed by Flask along with HTML/Jinja template and CSS.</li>
-    <li>Flask will interpret the HTML,CSS,Jinja,Python code and will create a new HTML document which will be pushed back to the users browser as can be seen on this webpage. </li>
-</ol>
-</div>
+      <p>Back end code for this web app is written in;</p>
+      <ul>
+        <li>
+          <a href="https://www.python.org/" target="_blank">Python</a>, a
+          high-level, interpreted, general-purpose programming language. <br />
+          Its design philosophy emphasises code readability with the use of
+          significant indentation. <br />
+          Python is dynamically-typed and garbage-collected. It supports
+          multiple programming paradigms, including structured (particularly
+          procedural),object-oriented and functional programming. It is often
+          described as a "batteries included" language due to its comprehensive
+          standard library
+        </li>
+        <li>
+          <a href="https://palletsprojects.com/p/flask/" target="_blank"
+            >Flask</a
+          >, is a lightweight
+          <a
+            href="https://wsgi.readthedocs.io/en/latest/what.html"
+            target="_blank"
+            >WSGI</a
+          >
+          web application framework
+        </li>
+        <li>
+          <a href="https://openweathermap.org/current" target="_blank"
+            >OpenWeatherMap API</a
+          >, is used to receive Weather data
+        </li>
+        <li>
+          <a href="https://www.pythonanywhere.com/" target="_blank"
+            >Python Anywhere</a
+          >, is used to host this Webapp which allows you to host, run, and code
+          Python in the cloud, which is pretty cool!
+        </li>
+      </ul>
 
-</div>
+      <h3>How this app work ?</h3>
+      <ol>
+        <li>
+          When a user enters the web app URL i.e.
+          <a href="https://amaldevelops.pythonanywhere.com/"
+            >https://amaldevelops.pythonanywhere.com</a
+          >
+          it will call the main route in the Python code.
+        </li>
+        <li>
+          Default behaviour of the Main route in the Python/flask code is
+          programmed so it will give "Melbourne,Australia" weather information
+          by calling up the main function and will pass the location as a
+          variable to the function, which contains code to call the
+          OpenWeathermap API.
+        </li>
+        <li>
+          Using the following format we can call the API using this format with
+          a
+          <a
+            href="https://flask.palletsprojects.com/en/2.2.x/quickstart/"
+            target="_blank"
+            >GET request:</a
+          >
+          <code
+            >[https://api.openweathermap.org/data/2.5/weather?q={location_input}&appid={API_key}&units=metric]</code
+          >
+        </li>
+        <li>
+          <code>{location_input}</code> is passed from the user entered location
+          along with <code>{API_key}</code> supplied by
+          openweathermap.[&units=metric] is used to specify the unit of
+          measurement we need.
+        </li>
+        <li>
+          In response Openweathermap will send a response in
+          <a href="https://www.json.org/json-en.html" target="_blank"
+            >JSON format</a
+          >
+        </li>
+        <li>
+          A function written in Python will convert JSON format to a Python
+          Dictionary and we can then manipulate the data as we wish.
+        </li>
+        <li>
+          Using
+          <a
+            href="https://docs.python.org/3/tutorial/datastructures.html"
+            target="_blank"
+            >Python dictionary methods</a
+          >
+          we can extract the information we require and all required weather
+          data is stored in a Python variable in text format.
+        </li>
+        <li>
+          Above Python variable is passed to Flask and it is parsed by Flask
+          along with HTML/Jinja template and CSS.
+        </li>
+        <li>
+          Flask will interpret the HTML,CSS,Jinja,Python code and will create a
+          new HTML document which will be pushed back to the users browser as
+          can be seen on this webpage.
+        </li>
+      </ol>
+    </div>
 
-<div id="footer">
-<p><a href="https://1amal.github.io/">Amal Kariyawasam, Last Update: 25/06/2025</a></p>
+    <!-- </div> -->
 
-</div>
-
-</body>
+    <div id="footer">
+      <p>
+        <a href="https://1amal.github.io/"
+          >Amal Kariyawasam, Last Update: 25/06/2025</a
+        >
+      </p>
+    </div>
+  </body>
 </html>

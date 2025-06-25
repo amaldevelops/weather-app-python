@@ -1,26 +1,47 @@
-/*Amal Kariyawasam, 11/08/2022,
+/*Amal Kariyawasam, 25/06/2025,
 This is the main CSS file 
 */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  color-scheme: light dark;
+  color: #000000;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* Main background */
-*{
-background-color: #ffffff;
-font-family: Arial, Helvetica, sans-serif;
+* {
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Nav Bar */
 #nav_bar {
   text-align: center;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 1px;
-  padding-left: 20px;
+  padding: 20px 20px 1px 20px;
+  margin-top: 0;
+  margin-bottom: 5rem;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 200;
-  color: #04AA6D;
- }
+  color: #04aa6d;
+}
 
-#nav_bar_list ul{
+#nav_bar_list ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -29,59 +50,54 @@ font-family: Arial, Helvetica, sans-serif;
   padding: 20px 20px 20px 20px;
 }
 
-
-#nav_bar_list li{
+#nav_bar_list li {
   float: left;
   list-style-type: none;
 }
 
-#nav_bar_list a{
+#nav_bar_list a {
   display: block;
-  color: #000000;;
+  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 #nav_bar_list li a:hover:not(.active) {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
 }
 
 #nav_bar_list .active {
   background-color: #405b51;
 }
 
-a{
-  color:#000000;
+a {
+  color: #000000;
 }
 
 /* Weather Div */
-.current_weather
-{
-color:#2828b3;
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 1rem;
-font-weight: 200;
-padding-top: 200px;
-padding-right: 10px;
-padding-bottom: 250px;
-padding-left: 10px;
-background-image: url('/static/weather.jpg');
-background-repeat: no-repeat;
-background-attachment:fixed ;
-background-size: cover;
+.current_weather {
+  color: #2828b3;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 200px 10px 250px 10px;
+  background-image: url("/static/weather.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #introduction {
-background-color:#fcfcff;
-color:#000000;
-text-align: center;
-padding: 20px 20px 20px 20px;
+  background-color: #fcfcff;
+  color: #000000;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
 }
 
-#usage{
-  color:#000000;
+#usage {
+  color: #000000;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.5vh;
@@ -89,8 +105,8 @@ padding: 20px 20px 20px 20px;
   padding: 20px 20px 20px 20px;
 }
 
-#tech_stack{
-  color:#000000;
+#tech_stack {
+  color: #000000;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.5vh;
@@ -99,11 +115,15 @@ padding: 20px 20px 20px 20px;
 }
 
 /* Footer styling */
-#footer{
-  color:#000000;
+#footer {
+  color: #000000;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 200;
   padding: 20px 20px 20px 20px;
+}
+
+.intro {
+  padding: 10px;
 }
