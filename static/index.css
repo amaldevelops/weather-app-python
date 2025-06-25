@@ -127,3 +127,11 @@ a {
 .intro {
   padding: 10px;
 }
+
+.form input {
+  background-color: #000000;
+}
+
+button {
+  background-color: #000000;
+}

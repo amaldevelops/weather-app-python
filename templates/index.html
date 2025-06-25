@@ -31,6 +31,16 @@
       </h1>
     </div>
 
+    <div>
+      <form action="/" method="GET" class="form">
+        <label for="cityName">City Name</label><br />
+        <input type="text" id="cityName" name="cityName" /><br />
+        <label for="countryCode">Country Code</label><br />
+        <input type="text" id="countryCode" name="countryCode" /><br />
+        <button type="submit">Get Weather Info</button><br />
+      </form>
+    </div>
+
     <!-- Current weather will be displayed here -->
     <div class="current_weather">
       <h1>{{weather}}</h1>
