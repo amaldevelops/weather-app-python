@@ -3,7 +3,7 @@ This is the main CSS file
 */
 /* Main background */
 *{
-background-color: #2b2a33;
+background-color: #ffffff;
 font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -25,7 +25,7 @@ font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #c5c5c5;
   padding: 20px 20px 20px 20px;
 }
 
@@ -37,7 +37,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 #nav_bar_list a{
   display: block;
-  color: white;
+  color: #000000;;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -52,7 +52,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 a{
-  color:rgb(106, 130, 228);
+  color:rgb(104, 120, 185);
 }
 
 /* Weather Div */
@@ -74,8 +74,8 @@ background-size: cover;
 }
 
 #introduction {
-background-color:#48484a;
-color:#dcdcdd;
+background-color:#fcfcff;
+color:#000000;
 text-align: center;
 padding: 20px 20px 20px 20px;
 }
